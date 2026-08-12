@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a7ba8;
+  --color-primary-dark: #0d5a7a;
+  --color-primary-deep: #08465f;
+  --color-secondary: #dceff5;
+  --color-secondary-mid: #a8d5e5;
+  --color-gold: #e8b923;
+  --color-gold-soft: #f2d56b;
+  --color-warm-white: #f8f8f5;
+  --color-ink: #17232b;
+  --color-ink-muted: #4a5863;
+  --color-surface: #ffffff;
+  --font-display: "Manrope", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --font-body: "Source Sans 3", "Noto Sans Ethiopic", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Noto Serif Ethiopic", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warm-white text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display tracking-tight text-ink;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .container-glic {
+    @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .fade-up {
+    animation: fadeUp 0.8s ease-out both;
+  }
+
+  .fade-up-delay {
+    animation: fadeUp 0.9s ease-out 0.15s both;
+  }
+
+  .fade-up-delay-2 {
+    animation: fadeUp 1s ease-out 0.3s both;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

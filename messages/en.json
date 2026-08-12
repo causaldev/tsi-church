@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "ministries": "Ministries",
+    "locations": "Locations",
+    "media": "Media",
+    "sermons": "Sermons",
+    "videos": "Videos",
+    "livestream": "Livestream",
+    "books": "Books",
+    "events": "Events",
+    "blog": "Blog",
+    "give": "Give",
+    "contact": "Contact",
+    "watchLive": "Watch Live",
+    "ourPastor": "Our Pastor",
+    "history": "Our History",
+    "vision": "Vision & Mission",
+    "beliefs": "Beliefs & Values",
+    "commitment": "Our Commitment"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewAll": "View all",
+    "getDirections": "Get directions",
+    "readStory": "Read his story",
+    "discoverStory": "Discover our story",
+    "watch": "Watch",
+    "listen": "Listen",
+    "share": "Share",
+    "comingSoon": "Details coming soon",
+    "placeholder": "Content will appear here when published in the admin portal."
+  },
+  "footer": {
+    "quickLinks": "Quick links",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "Gospel Light International Church"
+  }
+}

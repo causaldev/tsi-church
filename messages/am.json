@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "መነሻ",
+    "about": "ስለ እኛ",
+    "ministries": "አገልግሎቶች",
+    "locations": "ቦታዎች",
+    "media": "ሚዲያ",
+    "sermons": "ስብከቶች",
+    "videos": "ቪዲዮዎች",
+    "livestream": "ቀጥታ ስርጭት",
+    "books": "መጽሐፍት",
+    "events": "ዝግጅቶች",
+    "blog": "ብሎግ",
+    "give": "ስጡ",
+    "contact": "አግኙን",
+    "watchLive": "ቀጥታ ይመልከቱ",
+    "ourPastor": "ፓስተራችን",
+    "history": "ታሪካችን",
+    "vision": "ራዕይ እና ተልእኮ",
+    "beliefs": "እምነቶች እና እሴቶች",
+    "commitment": "ቁርጠኝነታችን"
+  },
+  "common": {
+    "learnMore": "ተጨማሪ ይወቁ",
+    "viewAll": "ሁሉንም ይመልከቱ",
+    "getDirections": "አቅጣጫ ያግኙ",
+    "readStory": "ታሪኩን ያንብቡ",
+    "discoverStory": "ታሪካችንን ያግኙ",
+    "watch": "ይመልከቱ",
+    "listen": "ያዳምጡ",
+    "share": "ያጋሩ",
+    "comingSoon": "ዝርዝሮች በቅርቡ",
+    "placeholder": "ይህ ይዘት ከአስተዳዳሪ ፖርታል ሲታተም እዚህ ይታያል።"
+  },
+  "footer": {
+    "quickLinks": "ፈጣን አገናኞች",
+    "contact": "አግኙን",
+    "follow": "ይከተሉን",
+    "rights": "ወንጌል ብርሃን አለም አቀፍ ቤተ ክርስቲያን"
+  }
+}
