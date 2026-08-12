@@ -40,8 +40,6 @@ next-env.d.ts
 
 .env
 
-/media
-
 # Playwright
 node_modules/
 /test-results/
@@ -50,8 +48,8 @@ node_modules/
 /playwright/.cache/
 
 # Local media uploads (keep folder)
-media/*
-!media/.gitkeep
+/media/*
+!/media/.gitkeep
 
 # Env
 .env
