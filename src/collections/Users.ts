@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { authenticated } from '../access'
+import { authenticated, authenticatedAdmin } from '../access'
 
 export const Users: CollectionConfig = {
   slug: 'users',
@@ -8,7 +8,7 @@ export const Users: CollectionConfig = {
   },
   auth: true,
   access: {
-    admin: authenticated,
+    admin: authenticatedAdmin,
     create: async ({ req }) => {
       if (req.user) return true
       const users = await req.payload.find({ collection: 'users', limit: 0 })

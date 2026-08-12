@@ -16,11 +16,15 @@ export default async function AboutPageRoute({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
 
+  const aboutPromise = getAboutPage(locale as Locale).catch(() => null)
+  const milestonesPromise = getPublishedCollection('history-milestones', locale as Locale, { sort: 'order' })
+  const missionPromise = getPublishedCollection('mission-items', locale as Locale, { sort: 'order' })
+  const valuesPromise = getPublishedCollection('core-values', locale as Locale, { sort: 'order' })
   const [about, milestones, mission, values] = await Promise.all([
-    getAboutPage(locale as Locale).catch(() => null),
-    getPublishedCollection('history-milestones', locale as Locale, { sort: 'order' }),
-    getPublishedCollection('mission-items', locale as Locale, { sort: 'order' }),
-    getPublishedCollection('core-values', locale as Locale, { sort: 'order' }),
+    aboutPromise,
+    milestonesPromise,
+    missionPromise,
+    valuesPromise,
   ])
 
   return (

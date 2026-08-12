@@ -6,6 +6,7 @@ import { locales, type Locale } from '@/i18n/config'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { getSiteSettings } from '@/lib/cms'
+import { fontVariables } from '@/lib/fonts'
 import '../styles.css'
 
 export function generateStaticParams() {
@@ -32,24 +33,8 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&family=Noto+Sans+Ethiopic:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body
-        className="font-body"
-        style={{
-          fontFamily:
-            locale === 'am'
-              ? '"Noto Sans Ethiopic", "Source Sans 3", system-ui, sans-serif'
-              : '"Source Sans 3", "Noto Sans Ethiopic", system-ui, sans-serif',
-        }}
-      >
+    <html lang={locale} data-locale={locale} className={fontVariables}>
+      <body className="font-body">
         <NextIntlClientProvider messages={messages}>
           <Header locale={locale} watchLiveUrl={settings?.watchLiveUrl} />
           <main>{children}</main>

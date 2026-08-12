@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { anyone, authenticated, authenticatedOrPublished } from '../access'
+import { authenticated, authenticatedOrPublished } from '../access'
 import { seoFields, slugField } from '../fields'
 import { revalidatePublic } from '../hooks/revalidate'
 

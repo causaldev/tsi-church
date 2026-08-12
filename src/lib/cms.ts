@@ -1,4 +1,5 @@
 import { getPayload } from 'payload'
+import type { DataFromCollectionSlug, PaginatedDocs } from 'payload'
 import config from '@payload-config'
 import type { Locale } from '@/i18n/config'
 import { draftMode } from 'next/headers'
@@ -37,25 +38,27 @@ export async function getContactPage(locale: Locale) {
   return payload.findGlobal({ slug: 'contact-page', locale })
 }
 
-export async function getPublishedCollection(
-  collection:
-    | 'sermons'
-    | 'videos'
-    | 'livestreams'
-    | 'books'
-    | 'events'
-    | 'blog-posts'
-    | 'locations'
-    | 'ministries'
-    | 'history-milestones'
-    | 'core-values'
-    | 'mission-items'
-    | 'gallery-items'
-    | 'sermon-categories'
-    | 'blog-categories',
+type PublishedCollectionSlug =
+  | 'sermons'
+  | 'videos'
+  | 'livestreams'
+  | 'books'
+  | 'events'
+  | 'blog-posts'
+  | 'locations'
+  | 'ministries'
+  | 'history-milestones'
+  | 'core-values'
+  | 'mission-items'
+  | 'gallery-items'
+  | 'sermon-categories'
+  | 'blog-categories'
+
+export async function getPublishedCollection<const TCollection extends PublishedCollectionSlug>(
+  collection: TCollection,
   locale: Locale,
   options: { limit?: number; sort?: string; where?: Record<string, unknown>; depth?: number } = {},
-) {
+): Promise<PaginatedDocs<DataFromCollectionSlug<TCollection>>> {
   const payload = await getPayloadClient()
   const { isEnabled } = await draftMode()
   const draftAware =
