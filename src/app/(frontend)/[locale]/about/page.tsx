@@ -3,7 +3,6 @@ import { setRequestLocale } from 'next-intl/server'
 import type { Locale } from '@/i18n/config'
 import { getAboutPage, getPublishedCollection } from '@/lib/cms'
 import { PageHero } from '@/components/Section'
-import { AboutSectionNav } from '@/components/AboutSectionNav'
 import { ValueCard } from '@/components/Cards'
 import { ButtonLink } from '@/components/ButtonLink'
 
@@ -30,7 +29,6 @@ export default async function AboutPageRoute({ params }: Props) {
         title={about?.introHeading || 'About Gospel Light'}
         description="Learn who we are, our story, vision, beliefs, and commitment as the founding church and international headquarters."
       />
-      <AboutSectionNav locale={locale} />
 
       <section id="who-we-are" className="scroll-mt-28 bg-white py-16 md:py-20">
         <div className="container-glic max-w-4xl">
